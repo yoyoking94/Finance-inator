@@ -67,10 +67,9 @@ const Dashboard = () => {
                     gridAutoRows: "80px",
                     gridTemplateAreas: gridTemplateSmallScreens,
                 }}>
-            <Row1></Row1>
-            <Row2></Row2>
-            <Row3></Row3>
-
+            <Row1 />
+            <Row2 />
+            <Row3 />
         </Box>
     )
 }

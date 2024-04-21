@@ -1,16 +1,12 @@
-/* eslint-disable @typescript-eslint/ban-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
-import { useState } from 'react'
-import { Box, Typography, useTheme } from '@mui/material'
+import { lazy, useState } from 'react'
 import { Link } from 'react-router-dom'
+const FlexBetween = lazy(() => import('@/components/FlexBetween'))
+import { Box, Typography, useTheme } from '@mui/material'
 import PixIcon from "@mui/icons-material/Pix"
 
-import FlexBetween from '@/components/FlexBetween'
 
-type Props = {}
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
     const { palette } = useTheme()
     const [selected, setSelected] = useState('dashboard')
 
@@ -27,7 +23,7 @@ const Navbar = (props: Props) => {
                     }}>Dashboard</Link>
                 </Box>
                 <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-                    <Link to='/' onClick={() => setSelected("predictions")} style={{
+                    <Link to='/predictions' onClick={() => setSelected("predictions")} style={{
                         color: selected === "predictions" ? "inherit" : palette.grey[700], textDecoration: "inherit"
                     }}>Predictions</Link>
                 </Box>
