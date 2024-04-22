@@ -8,6 +8,7 @@ const Navbar = lazy(() => import('@/scenes/navbar'))
 const Dashboard = lazy(() => import('@/scenes/dashboard'))
 const Predictions = lazy(() => import('@/scenes/predictions'))
 
+
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), [])
 

@@ -34,8 +34,8 @@ const PORT = process.env.PORT || 9000;
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true, }).then(async () => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
-    /* await mongoose.connection.db.dropDatabase();
+    await mongoose.connection.db.dropDatabase();
     KPI.insertMany(kpis);
     Product.insertMany(products);
-    Transaction.insertMany(transactions); */
+    Transaction.insertMany(transactions);
 }).catch((error) => console.log(`${error} did not connect`));
