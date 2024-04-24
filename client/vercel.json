@@ -3,6 +3,5 @@
       { "src": "*", "use": "@vercel/node" }
     ],
     "routes": [],
-    "version": 2,
-    "type": "project"
+    "version": 2
   }
